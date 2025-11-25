@@ -1,0 +1,94 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="icon" type="image/x-icon" href="./assets/Grid-2x2.svg">
+        <title>Harry's Personal Website</title>
+    </head>
+    <body>
+        <nav>
+            <!-- TODO 2: Add an logo and a name -->
+            <a href="./" id="logo">
+                <img src="./assets/Grid-2x2.svg" alt="Logo" />
+                Harry
+            </a>
+
+            <button id="anchor-list-trigger" onclick="toggleAnchorList()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentcolor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M 3 6 h 18 M 3 12 h 18 M 3 18 h 18" />
+                </svg>
+            </button>
+
+            <!-- TODO 3: Add the URL to your GitHub Pages repository -->
+            <ul id="anchor-list">
+                <li><a href="https://github.com/lotrave/lotrave.github.io.git">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <div id="section-container">
+            <section id="hero">
+                <!-- TODO 4: Assign an h1 heading and a short description about you -->
+                <!-- TODO 4: Replace the 2 <span>...</span> tags with 2 appropriate tags -->
+                <span>
+                    <h1>Hey, I'm Harry</h1>
+                    <p>UCFA of COMP 4900 (Fall 2025)</p>
+                </span>
+                <!-- TODO 4: Add an avatar -->
+                <img id="avatar" />
+            </section>
+
+            <hr />
+
+            <section id="about">
+                <h2>About</h2>
+                <!-- TODO 5: A short paragraph about you -->
+                <p>I am a freshman learning programming.This is an assignment from COMP 4900, which is the starting point for my learning of HTML programming.I will continue to work hard.</p>
+            </section>
+
+            <hr />
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <!-- TODO 6: Elaborate more skills using HTML elements -->
+                <<div id="skill-set">
+                    <div class="skill">
+                        <img src="./assets/Grid-2x2.svg" alt="HTML" />
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill">
+                        <img src="./assets/Grid-2x2.svg" alt="CSS" />
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill">
+                        <img src="./assets/Grid-2x2.svg" alt="JavaScript" />
+                        <span>C++</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr />
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <!-- TODO 7: Put your HKUST email without the domain -->
+                <p>hychenad</p>
+            </section>
+        </div>
+
+        <footer>An assessment for COMP 4900 (Fall 2025)</footer>
+
+        <script>
+            function toggleAnchorList() {
+                const anchor_list = document.getElementById("anchor-list");
+                if (window.getComputedStyle(anchor_list).getPropertyValue("--show-anchor-list") == "none") {
+                    anchor_list.style.setProperty("--show-anchor-list", "block");
+                }
+                else {
+                    anchor_list.style.setProperty("--show-anchor-list", "none");
+                }
+            }
+        </script>
+    </body>
+</html>
